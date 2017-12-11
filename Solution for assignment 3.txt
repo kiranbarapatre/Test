@@ -1,0 +1,15 @@
+Solution 1:
+-2 EC2 server in multi AZ auto-scaling for Apache Web Server in private subnet(WebSubnet) behind ELB.
+-2 EC2 server in multi AZ for Apache Tomcat application server in private subnet(AppSubnet)
+-2 EC2 server in differnt AZ for Active MQ server cluster in private subnet (AppSubnet). (Recommended is 3 for cluster).
+-2 EC2 server in different AZ for MongoDB server cluster. (Recommended is 3 for cluster).
+-RDS multi AZ Oracle DB instance.
+
+
+
+Solution 2:
+-2 EC2 server in multi AZ auto-scaling for Apache Web Server in private subnet(WebSubnet) behind ELB.
+-2 EC2 server in multi AZ for Apache Tomcat application server in private subnet(AppSubnet)
+-SQS service (instead of AciveMQ)
+-Dynamodb service (instead of MongoDB)
+-RDS multi AZ Oracle DB instance.
